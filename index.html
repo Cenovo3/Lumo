@@ -42,11 +42,13 @@
       padding: 20px;
       transition: 0.3s ease;
       height: 100%;
+      cursor: pointer;
     }
 
     .card-lumo:hover {
       transform: translateY(-6px);
       border-color: #00d4ff;
+      box-shadow: 0 0 18px rgba(0, 212, 255, 0.2);
     }
 
     .btn-lumo {
@@ -83,6 +85,11 @@
       padding: 20px;
       opacity: 0.7;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   </style>
 </head>
 
@@ -90,7 +97,7 @@
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark px-4">
-  <a class="navbar-brand fw-bold" href="#">Lumo</a>
+  <a class="navbar-brand fw-bold" href="index.html">Lumo</a>
 
   <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
     <span class="navbar-toggler-icon"></span>
@@ -98,10 +105,11 @@
 
   <div class="collapse navbar-collapse" id="nav">
     <div class="navbar-nav ms-auto">
-      <a class="nav-link" href="#">Home</a>
-      <a class="nav-link" href="#">Explore</a>
-      <a class="nav-link" href="#">Programs</a>
-      <a class="nav-link" href="#">Admissions</a>
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="explore.html">Explore</a>
+      <a class="nav-link" href="program.html">Programs</a>
+      <a class="nav-link" href="admissions.html">Admissions</a>
+      <a class="nav-link" href="create.html">Create</a>
     </div>
   </div>
 </nav>
@@ -111,16 +119,21 @@
 <section class="hero">
   <div class="container">
 
-    <h1>Lumo The Campus Life Super App</h1>
+    <h1>Lumo — The Campus Life Super App</h1>
 
     <p>
-      The modern student experience for the International Space University.
+      The digital experience layer for the International Space University.
       Discover programs, connect globally, and explore the future of space.
     </p>
 
     <div class="mt-4">
-      <button class="btn btn-lumo btn-lg me-2">Explore ISU</button>
-      <button class="btn btn-outline-light btn-lg">Apply Now</button>
+      <a href="explore.html" class="btn btn-lumo btn-lg me-2">
+        Explore ISU
+      </a>
+
+      <a href="admissions.html" class="btn btn-outline-light btn-lg">
+        Apply Now
+      </a>
     </div>
 
   </div>
@@ -138,24 +151,30 @@
   <div class="row g-4">
 
     <div class="col-md-4">
-      <div class="card-lumo text-center">
-        <h4> Programs</h4>
-        <p>Explore space studies, master’s programs, and executive courses.</p>
-      </div>
+      <a href="program.html">
+        <div class="card-lumo text-center">
+          <h4> Programs</h4>
+          <p>Explore space studies, master’s programs, and executive courses.</p>
+        </div>
+      </a>
     </div>
 
     <div class="col-md-4">
-      <div class="card-lumo text-center">
-        <h4> Community</h4>
-        <p>Connect with students, alumni, and global space leaders.</p>
-      </div>
+      <a href="explore.html">
+        <div class="card-lumo text-center">
+          <h4> Community</h4>
+          <p>Connect with students, alumni, and global space leaders.</p>
+        </div>
+      </a>
     </div>
 
     <div class="col-md-4">
-      <div class="card-lumo text-center">
-        <h4> Events</h4>
-        <p>Stay updated with ISU workshops, sessions, and global programs.</p>
-      </div>
+      <a href="explore.html">
+        <div class="card-lumo text-center">
+          <h4> Events</h4>
+          <p>Stay updated with ISU workshops, sessions, and global programs.</p>
+        </div>
+      </a>
     </div>
 
   </div>
@@ -200,7 +219,9 @@
   <h2>Start Your Journey With ISU</h2>
   <p class="text-secondary">Powered by Lumo — built for the next generation of space leaders</p>
 
-  <button class="btn btn-lumo btn-lg mt-3">Get Started</button>
+  <a href="explore.html" class="btn btn-lumo btn-lg mt-3">
+    Get Started
+  </a>
 
 </section>
 
