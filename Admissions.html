@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumo - Explore</title>
+  <title>Lumo - Admissions</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,17 +20,17 @@
     }
 
     /* HEADER */
-    .explore-header {
+    .page-header {
       text-align: center;
       padding: 60px 20px 20px;
     }
 
-    .explore-header h1 {
+    .page-header h1 {
       font-size: 2.5rem;
       font-weight: bold;
     }
 
-    .explore-header p {
+    .page-header p {
       opacity: 0.8;
     }
 
@@ -61,15 +61,20 @@
       border-color: #00d4ff;
     }
 
-    /* EMPTY STATE */
-    .empty {
-      text-align: center;
-      padding: 30px;
-      opacity: 0.9;
+    /* FORM */
+    .form-control {
+      background: #0b1320;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: white;
     }
 
-    #exploreList {
-      margin-top: 20px;
+    .form-control::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+
+    label {
+      margin-top: 10px;
+      margin-bottom: 5px;
     }
 
     footer {
@@ -91,39 +96,37 @@
   <div class="navbar-nav ms-auto">
     <a class="nav-link" href="index.html">Home</a>
     <a class="nav-link" href="explore.html">Explore</a>
+    <a class="nav-link" href="program.html">Programs</a>
+    <a class="nav-link" href="admissions.html">Admissions</a>
     <a class="nav-link" href="create.html">Create</a>
   </div>
 </nav>
 
 
 <!-- HEADER -->
-<section class="explore-header">
+<section class="page-header">
 
-  <h1>Explore</h1>
+  <h1>Admissions</h1>
 
   <p>
-    Discover ISU-inspired programs, collaboration opportunities, and space learning experiences.
+    Join the International Space University through the Lumo application portal.
   </p>
-
-  <button class="btn btn-lumo btn-lg mt-3" onclick="loadExplore()">
-    Load Featured Content
-  </button>
 
 </section>
 
 
-<!-- DEFAULT ISU STATE (shows BEFORE clicking) -->
-<div class="container mt-4">
+<!-- INFO SECTION -->
+<div class="container mb-4">
 
-  <h3 class="mb-3">🌍 What’s Happening at ISU</h3>
+  <div class="lumo-card">
 
-  <div class="lumo-card empty">
-
-    <h4>📭 No Live Events Available</h4>
+    <h5> Application Overview</h5>
+    <p>
+      ISU admissions are competitive and international. Applicants are selected based on academic background, professional experience, and interest in space studies.
+    </p>
 
     <p>
-      There are currently no publicly listed active ISU events.
-      New programs are announced periodically through official ISU channels.
+      Programs like the Space Studies Program (SSP) bring together participants from over 40 countries.
     </p>
 
   </div>
@@ -131,42 +134,38 @@
 </div>
 
 
-<!-- DYNAMIC RESULTS -->
+<!-- APPLICATION FORM -->
 <div class="container">
-  <div id="exploreList"></div>
+
+  <div class="lumo-card">
+
+    <h5 class="mb-3">📝 Apply Through Lumo</h5>
+
+    <label>Name</label>
+    <input class="form-control" placeholder="Your full name">
+
+    <label>Email</label>
+    <input class="form-control" placeholder="your@email.com">
+
+    <label>Program Interest</label>
+    <input class="form-control" placeholder="SSP, MSS, Executive Course...">
+
+    <label>Why ISU?</label>
+    <textarea class="form-control" rows="4" placeholder="Tell us your motivation..."></textarea>
+
+    <button class="btn btn-lumo mt-3 w-100">
+      Submit Application
+    </button>
+
+  </div>
+
 </div>
 
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Lumo — Explore Space Education
+  © 2026 Lumo — ISU Admissions Portal
 </footer>
-
-
-<!-- JS -->
-<script>
-function loadExplore() {
-  const exploreList = document.getElementById("exploreList");
-
-  const data = [
-    "🚀 Space Systems Workshop (ISU Program Simulation)",
-    "🛰 Satellite Mission Design Seminar",
-    "🌍 International Space Collaboration Lab"
-  ];
-
-  exploreList.innerHTML = "";
-
-  data.forEach(item => {
-    exploreList.innerHTML += `
-      <div class="lumo-card mt-2">
-        ${item}
-      </div>
-    `;
-  });
-}
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
